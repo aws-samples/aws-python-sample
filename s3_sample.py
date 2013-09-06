@@ -30,4 +30,4 @@ k = Key(bucket)
 k.key = 'hello_world.txt'
 
 print "Uploading some data to " + bucket_name + " with key: " + k.key
-k.set_contents_from_string('This is a test of S3. Hellow World!')
+k.set_contents_from_string('This is a test of S3. Hello World!')
