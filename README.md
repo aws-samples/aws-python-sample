@@ -1,6 +1,7 @@
 # AWS SDK for Python Sample Project
 
-A simple Python application illustrating usage of the AWS SDK for Python (boto).
+A simple Python application illustrating usage of the AWS SDK for Python (also
+referred to as Boto).
 
 ## Requirements
 
@@ -11,15 +12,17 @@ with:
 
 ## Basic Configuration
 
-You need to set your AWS security credentials in `~/.boto` before the sample
-is able to connect to AWS. This file should contain:
+You need to set your AWS security credentials before the sample is able to
+connect to AWS. The SDK will automatically pick up credentials in environment
+variables:
 
-    [Credentials]
-    aws_access_key_id = <YOUR ACCESS KEY>
-    aws_secret_access_key = <YOUR SECRET KEY>
+    export AWS_ACCESS_KEY_ID="Your AWS Access Key ID"
+    export AWS_SECRET_ACCESS_KEY="Your AWS Secret Access Key"
 
 See the [Security Credentials](http://aws.amazon.com/security-credentials) page
-for more information on getting your keys.
+for more information on getting your keys. It's also possible to configure your
+credentials via a configuration file. See the [Boto Config documentation](http://boto.readthedocs.org/en/latest/boto_config_tut.html)
+for more information.
 
 ## Running the S3 sample
 
