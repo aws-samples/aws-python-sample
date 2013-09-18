@@ -20,7 +20,7 @@ import uuid
 s3 = boto.connect_s3()
 
 # Create a new bucket.
-bucket_name = "python-sdk-sample-" + str(uuid.uuid4())
+bucket_name = "python-sdk-sample-%s" % uuid.uuid4()
 print "Creating new bucket with name: " + bucket_name
 bucket = s3.create_bucket(bucket_name)
 
@@ -33,8 +33,10 @@ print "Uploading some data to " + bucket_name + " with key: " + k.key
 k.set_contents_from_string('This is a test of S3. Hello World!')
 
 # Fetch the key to show that we stored something.
-print "Downloading the object we just uploaded:\n"
-print k.get_contents_as_string() + "\n"
+print "Downloading the object we just uploaded:"
+print
+print k.get_contents_as_string()
+print
 
 print "Now delete the same object"
 k.delete()

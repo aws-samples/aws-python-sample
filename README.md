@@ -5,8 +5,8 @@ referred to as Boto).
 
 ## Requirements
 
-This sample project depends on boto, the AWS SDK for Python. You can install it
-with:
+This sample project depends on Boto, the AWS SDK for Python, and requires
+Python 2.6 or 2.7. You can install Boto using pip:
 
     pip install boto
 
