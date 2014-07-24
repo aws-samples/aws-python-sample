@@ -12,16 +12,17 @@ Python 2.6 or 2.7. You can install Boto using pip:
 
 ## Basic Configuration
 
-You need to set your AWS security credentials before the sample is able to
-connect to AWS. The SDK will automatically pick up credentials in environment
-variables:
+You need to set up your AWS security credentials before the sample code is able
+to connect to AWS. You can do this by creating a file named "credentials" at ~/.aws/ 
+(C:\Users\USER_NAME\.aws\ for Windows users) and saving the following lines in the file:
 
-    export AWS_ACCESS_KEY_ID="Your AWS Access Key ID"
-    export AWS_SECRET_ACCESS_KEY="Your AWS Secret Access Key"
+    [default]
+    aws_access_key_id = <your access key id>
+    aws_secret_access_key = <your secret key>
 
 See the [Security Credentials](http://aws.amazon.com/security-credentials) page
 for more information on getting your keys. It's also possible to configure your
-credentials via a configuration file. See the [Boto Config documentation](http://boto.readthedocs.org/en/latest/boto_config_tut.html)
+credentials via other configuration files. See the [Boto Config documentation](http://boto.readthedocs.org/en/latest/boto_config_tut.html)
 for more information.
 
 ## Running the S3 sample
