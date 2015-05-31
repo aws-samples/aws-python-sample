@@ -42,6 +42,7 @@ for when you start making your own buckets.
 If you are seeing an __Access Denied__ error when the sample script tries to crete a new bucket,
 it is most likely because their is an issue with your AWS IAM (Idenity and Access Management).
 Follow the steps below to work resolve this issue:
+
 1. Visit your [AWS IAM Console](https://console.aws.amazon.com/iam/home)
 2. Select "Users" on the right hand side and follow the instructions to create a new user
    + Retrieve the access keys for this user and put them under ~/.aws/console
