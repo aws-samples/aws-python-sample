@@ -36,6 +36,20 @@ bucket name and file for you. All you need to do is run the code:
 The S3 documentation has a good overview of the [restrictions for bucket names](http://docs.aws.amazon.com/AmazonS3/latest/dev/BucketRestrictions.html)
 for when you start making your own buckets.
 
+## Debugging
+
+### Access Denied
+If you are seeing an __Access Denied__ error when the sample script tries to crete a new bucket,
+it is most likely because their is an issue with your AWS IAM (Idenity and Access Management).
+Follow the steps below to work resolve this issue:
+1. Visit your [AWS IAM Console](https://console.aws.amazon.com/iam/home)
+2. Select "Users" on the right hand side and follow the instructions to create a new user
+   + Retrieve the access keys for this user and put them under ~/.aws/console
+3. Select "Groups" on the right and side and follow the instructions to crete a new group
+   + Make sure it has the __AdministratorAccess__ policy added
+   + Add the user you created in step 2 to the group you create in step 3
+4. Try re-running the script
+
 ## License
 
 This sample application is distributed under the
