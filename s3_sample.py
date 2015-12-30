@@ -33,7 +33,7 @@ s3 = boto.connect_s3()
 # For more information about bucket name restrictions, see:
 # http://docs.aws.amazon.com/AmazonS3/latest/dev/BucketRestrictions.html
 bucket_name = "python-sdk-sample-%s" % uuid.uuid4()
-print "Creating new bucket with name: " + bucket_name
+print("Creating new bucket with name: " + bucket_name)
 bucket = s3.create_bucket(bucket_name)
 
 # Files in Amazon S3 are called "objects" and are stored in buckets. A specific
@@ -46,7 +46,7 @@ from boto.s3.key import Key
 k = Key(bucket)
 k.key = 'python_sample_key.txt'
 
-print "Uploading some data to " + bucket_name + " with key: " + k.key
+print ("Uploading some data to " + bucket_name + " with key: " + k.key)
 k.set_contents_from_string('Hello World!')
 
 # Fetch the key to show that we stored something. Key.generate_url will
@@ -57,17 +57,21 @@ k.set_contents_from_string('Hello World!')
 # http://boto.readthedocs.org/en/latest/ref/s3.html#boto.s3.key.Key.generate_url
 expires_in_seconds = 1800
 
-print "Generating a public URL for the object we just uploaded. This URL will be active for %d seconds" % expires_in_seconds
-print
-print k.generate_url(expires_in_seconds)
-print
-raw_input("Press enter to delete both the object and the bucket...")
+print("Generating a public URL for the object we just uploaded. This URL will be active for %d seconds" % expires_in_seconds)
+print('')
+print(k.generate_url(expires_in_seconds))
+print('')
+
+
+try: input = raw_input
+except NameError: pass
+input("Press enter to delete both the object and the bucket...")
 
 # Buckets cannot be deleted unless they're empty. Since we still have a
 # reference to the key (object), we can just delete it.
-print "Deleting the object."
+print("Deleting the object.")
 k.delete()
 
 # Now that the bucket is empty, we can delete it.
-print "Deleting the bucket."
+print("Deleting the bucket.")
 s3.delete_bucket(bucket_name)
