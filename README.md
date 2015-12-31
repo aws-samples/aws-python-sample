@@ -6,7 +6,7 @@ referred to as `boto3`).
 ## Requirements
 
 This sample project depends on `boto3`, the AWS SDK for Python, and requires
-Python 2.6.5+, 2.7, 3.3, or 3.4. You can install `boto3` using pip:
+Python 2.6.5+, 2.7, 3.3, 3.4, or 3.5. You can install `boto3` using pip:
 
     pip install boto3
 
