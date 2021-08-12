@@ -45,6 +45,6 @@ The sample creates randomly generated bucket names for you, but please be aware 
 
 ## License
 
-This sample application is distributed under the
-[Apache License, Version 2.0](http://www.apache.org/licenses/LICENSE-2.0).
-
+This sample application is distributed under th
+i[Apache License, Version 2.0](http://www.apache.org/licenses/LICENSE-2.0).
+kuch toh log kahenge
