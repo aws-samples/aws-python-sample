@@ -8,9 +8,7 @@ static long[] factorial = new int[] { 1, 1, 2, 6, 24, 120, 720, 5040, 40320, 362
 public static void main(String args[])  
 {  
 //constructor of the Scanner class  
-Scanner sc = new Scanner(System.in);  
-System.out.print("Enter a number to check: ");  
-//reading a number from the user  
+om the user  
 int n=sc.nextInt();  
 //calling the user-defined function to check Peterson number  
 if (isPeterson(n))  
